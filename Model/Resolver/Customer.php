@@ -28,6 +28,7 @@ use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
 use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Query\ResolverInterface;
 use Magento\GraphQl\Model\Query\ContextInterface;
+use Magento\Customer\Api\Data\CustomerInterface;
 use Mageplaza\Milestone\Helper\Data;
 
 /**
@@ -69,7 +70,10 @@ class Customer implements ResolverInterface
         array $value = null,
         array $args = null
     ) {
-        /** @var ContextInterface $context */
+        /**
+         * @var CustomerInterface $customer
+         * @var ContextInterface $context
+         */
         $customer = $this->getCustomer->execute($context);
 
         return $this->helper->getGroup($customer->getGroupId());

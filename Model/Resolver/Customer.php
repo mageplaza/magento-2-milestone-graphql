@@ -77,7 +77,7 @@ class Customer implements ResolverInterface
          * @var CustomerInterface $customer
          * @var ContextInterface $context
          */
-        $customer               = $this->getCustomer->execute($context);
+        $customer                 = $this->getCustomer->execute($context);
         $result['customer_group'] = $this->helper->getGroup($customer->getGroupId());
 
         return $result;

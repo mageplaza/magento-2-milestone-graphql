@@ -77,9 +77,20 @@ class Customer implements ResolverInterface
          * @var CustomerInterface $customer
          * @var ContextInterface $context
          */
-        $customer                 = $this->getCustomer->execute($context);
-        $result['customer_group'] = $this->helper->getGroup($customer->getGroupId());
+        $customer = $this->getCustomer->execute($context);
 
-        return $result;
+        return $this->getMileStoneData($customer);
+    }
+
+    /**
+     * @param CustomerInterface $customer
+     *
+     * @return array
+     */
+    private function getMileStoneData(CustomerInterface $customer)
+    {
+        return [
+            'customer_group' => $this->helper->getGroup($customer->getGroupId())
+        ];
     }
 }

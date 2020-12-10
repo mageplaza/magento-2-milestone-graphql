@@ -1,4 +1,8 @@
 
-type Customer @doc(description: "Customer defines the customer name and address and other details") {
-    customer_group: String @resolver(class: "Mageplaza\\MilestoneGraphQl\\Model\\Resolver\\Customer") @doc(description: "The customer's group name")
+type Customer {
+    mp_milestone: MpMileStone @resolver(class: "Mageplaza\\MilestoneGraphQl\\Model\\Resolver\\Customer") @doc(description: "An object containing the customer group name ..")
+}
+
+type MpMileStone @doc(description: "MpMileStone contains customer group name"){
+    customer_group: String @doc(description: "The customer's group name")
 }

@@ -69,12 +69,17 @@ class Customer implements ResolverInterface
             return null;
         }
 
+        if (!$this->helper->isShowGroup()) {
+            return __('Customer group is not allowed to show on Customer Dashboard');
+        }
+
         /**
          * @var CustomerInterface $customer
          * @var ContextInterface $context
          */
-        $customer = $this->getCustomer->execute($context);
+        $customer               = $this->getCustomer->execute($context);
+        $result['customer_group'] = $this->helper->getGroup($customer->getGroupId());
 
-        return $this->helper->getGroup($customer->getGroupId());
+        return $result;
     }
 }

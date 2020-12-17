@@ -1,6 +1,6 @@
 # Magento 2 Milestone GraphQL/PWA
 
-Magento 2 Milestone GraphQL is a part of Pre Order extension that add GraphQL features, this support for PWA Studio.
+Magento 2 Milestone GraphQL is a part of Milestone extension that add GraphQL features, this support for PWA Studio.
 ## 1. How to install
 
 Run the following command in Magento 2 root folder:

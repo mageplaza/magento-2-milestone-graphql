@@ -23,6 +23,7 @@ declare(strict_types=1);
 
 namespace Mageplaza\MilestoneGraphQl\Model\Resolver;
 
+use Magento\Framework\Exception\LocalizedException;
 use Magento\CustomerGraphQl\Model\Customer\GetCustomer;
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
 use Magento\Framework\GraphQl\Config\Element\Field;
@@ -65,12 +66,8 @@ class Customer implements ResolverInterface
      */
     public function resolve(Field $field, $context, ResolveInfo $info, array $value = null, array $args = null)
     {
-        if (!$this->helper->isEnabled()) {
+        if (!$this->helper->isEnabled() || !$this->helper->isShowGroup()) {
             return null;
-        }
-
-        if (!$this->helper->isShowGroup()) {
-            return __('Customer group is not allowed to show on Customer Dashboard');
         }
 
         /**

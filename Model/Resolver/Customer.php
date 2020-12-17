@@ -23,7 +23,6 @@ declare(strict_types=1);
 
 namespace Mageplaza\MilestoneGraphQl\Model\Resolver;
 
-use Magento\Framework\Exception\LocalizedException;
 use Magento\CustomerGraphQl\Model\Customer\GetCustomer;
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
 use Magento\Framework\GraphQl\Config\Element\Field;

@@ -41,8 +41,8 @@ To perform GraphQL queries in Magento, please do the following requirements:
 
 ## 3. Devdocs
 
-- [Milestone API & examples](https://documenter.getpostman.com/view/10589000/T1LJm8wp)
-- [Milestone GraphQL & examples](https://documenter.getpostman.com/view/10589000/TVmTaZia)
+- [Magento 2 Milestone API & examples](https://documenter.getpostman.com/view/10589000/T1LJm8wp)
+- [Magento 2 Milestone GraphQL & examples](https://documenter.getpostman.com/view/10589000/TVmTaZia)
 
 
 ## 4. Contribute to this module

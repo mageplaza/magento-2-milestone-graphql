@@ -48,9 +48,10 @@ To perform GraphQL queries in Magento, please do the following requirements:
 ## 4. Contribute to this module
 
 - Feel free to **Fork** and contribute to this module. 
+
 - You can create a pull request and we will merge your changes main branch.
 
 ## 5. Get Support
 
 - Feel free to [contact us](https://www.mageplaza.com/contact.html) if you have any further questions.
-- Like this project, Give us a **Star** ![star](https://i.imgur.com/S8e0ctO.png)
+- If you find this project helpful, please give us a **Star** ![star](https://i.imgur.com/S8e0ctO.png)
